@@ -12,6 +12,9 @@ stages:
           ss -plntu
           curl -i -XGET 'localhost:9200/'
           ps auxfww
+      - type: shell
+        name: Is it running yet?
+        command: |
           sleep 35
           curl -i -XGET 'localhost:9200/'
 
