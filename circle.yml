@@ -1,7 +1,6 @@
 version: 2
 executorType: docker
 containerInfo:
-    - image: python:3.5.2
     - image: elasticsearch:5.1
 stages:
   build:
@@ -11,10 +10,7 @@ stages:
       - type: shell
         name: Test ElasticSearch
         command: |
-          sleep 5
-          wget --tries 5 --timeout=15 --read-timeout=20 --waitretry=1 --retry-connrefused http://127.0.0.1:9200/
-          sleep 15
-          wget --tries 5 --timeout=15 --read-timeout=20 --waitretry=1 --retry-connrefused http://127.0.0.1:9200/
-          sleep 35
-          wget --tries 5 --timeout=15 --read-timeout=20 --waitretry=1 --retry-connrefused http://127.0.0.1:9200/
-    
+          ss -plntu
+          netstat -pltnu
+          curl http://127.0.0.1:9200/
+          ps auxfww
