@@ -14,5 +14,4 @@ stages:
           ps auxfww
       - type: shell
         name: Is it running yet?
-        command: \
-          sleep 35 && curl -XGET 'localhost:9200/_count?pretty' -d '{"query": {"match_all": {}}}'
+        command: sleep 35 && curl -XGET 'localhost:9200/_count?pretty' -d '{"query": {"match_all": {}}}'
