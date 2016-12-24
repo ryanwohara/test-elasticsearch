@@ -4,7 +4,7 @@ containerInfo:
     - image: elasticsearch:5.1
 stages:
   build:
-    workDir: /home/ubuntu/project
+    workDir: /root
     steps:
       - type: shell
         name: Test ElasticSearch
