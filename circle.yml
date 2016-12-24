@@ -2,7 +2,7 @@ version: 2
 executorType: docker
 containerInfo:
     - image: python:3.5.2
-    - image: elasticsearch:5.1.1
+    - image: elasticsearch:5.1
 stages:
   build:
     workDir: /home/ubuntu/project
