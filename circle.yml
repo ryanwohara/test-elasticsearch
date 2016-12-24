@@ -6,7 +6,6 @@ stages:
   build:
     workDir: /home/ubuntu/project
     steps:
-      - type: checkout
       - type: shell
         name: Test ElasticSearch
         command: |
