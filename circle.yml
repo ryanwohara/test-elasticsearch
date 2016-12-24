@@ -10,6 +10,8 @@ stages:
         name: Test ElasticSearch
         command: |
           ss -plntu
-          netstat -pltnu
           curl http://127.0.0.1:9200/
           ps auxfww
+          sleep 90
+          curl http://127.0.0.1:9200/
+
