@@ -10,8 +10,8 @@ stages:
         name: Test ElasticSearch
         command: |
           ss -plntu
-          curl http://127.0.0.1:9200/
+          curl -i -XGET 'localhost:9200/'
           ps auxfww
           sleep 35
-          curl http://127.0.0.1:9200/
+          curl -i -XGET 'localhost:9200/'
 
