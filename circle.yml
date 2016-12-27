@@ -1,7 +1,7 @@
 version: 2
 executorType: docker
 containerInfo:
-    - image: levlaz/elasticsearch-docker-ci:latest
+    - image: levlaz/elasticsearch-docker-ci:5.1.1
 stages:
   build:
     workDir: /root
