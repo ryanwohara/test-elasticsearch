@@ -10,5 +10,5 @@ stages:
       - type: shell
         name: Test ElasticSearch
         command: |
-          curl -I -XGET 'localhost:8080'
-          wget --tries 10 --timeout=15 --read-timeout=20 --waitretry=30 --retry-connrefused 'localhost:8080'
+          curl -I -XGET 'localhost:5672'
+          wget --tries 10 --timeout=15 --read-timeout=20 --waitretry=30 --retry-connrefused 'localhost:5672'
