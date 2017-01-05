@@ -9,6 +9,4 @@ stages:
     steps:
       - type: shell
         name: Test ElasticSearch
-        command: |
-          curl -I -XGET 'localhost:5672'
-          wget --tries 10 --timeout=15 --read-timeout=20 --waitretry=30 --retry-connrefused 'localhost:5672'
+        command: curl -I --retry 10 --retry-delay 10 -XGET 'localhost:5672'
