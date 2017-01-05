@@ -2,11 +2,11 @@ version: 2
 executorType: docker
 containerInfo:
     - image: levlaz/elasticsearch-docker-ci:5.1.1
-    - image: rabbitmq:3.5.4
+    - image: rabbitmq:3-management
 stages:
   build:
     workDir: /root
     steps:
       - type: shell
         name: Test ElasticSearch
-        command: sleep 10 && curl -I --retry 10 --retry-delay 10 -XGET 'localhost:5672'
+        command: sleep 10 && curl -I --retry 10 --retry-delay 10 -XGET 'localhost:15672'
